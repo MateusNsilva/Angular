@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { routing } from './app.routes'
+import { routing } from './app.routes';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -14,6 +16,8 @@ import { ContatoComponent } from './contato/contato.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ListagemDePostsComponent } from './listagem-de-posts/listagem-de-posts.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CepService } from './form/cep.service';
+
 
 
 @NgModule({
@@ -27,15 +31,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     ContatoComponent,
     SobreComponent,
-    ListagemDePostsComponent,
+    ListagemDePostsComponent
   ],
   imports: [
+    HttpModule,
+    HttpClientModule,
     BrowserModule,
     routing,
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    CepService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

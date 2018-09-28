@@ -25,7 +25,7 @@
       <div class="col-6">
         <div class="form-group">
           <label for="inputAddress">Cep</label>
-          <input type="text" formControlName="cep" class="form-control" placeholder="Cep">
+          <input type="text" formControlName="cep" class="form-control" placeholder="Cep" (change)="fillAddress()">
         </div>
       </div>
       <div class="col-6">
@@ -58,22 +58,14 @@
     <div class="row">
       <div class="col-6">
         <div class="form-group">
-          <label for="inputAddres2">Selecione sua cidade</label>
-          <select formControlName="cidade" class="form-control" placeholder="Selecione sua cidade">
-            <option>São Paulo</option>
-            <option>Pernambuco</option>
-            <option>Bahia</option>
-          </select>
+         <label for="inputAddres2">Cidade</label>
+         <input type="text" formControlName="cidade" class="form-control" placeholder="cidade">
         </div>
       </div>
       <div class="col-6">
         <div class="form-group">
-          <label for="inputAddres2">Selecione seu estado</label>
-          <select formControlName="estado" class="form-control">
-            <option>São Paulo</option>
-            <option>Recife</option>
-            <option>Salvador</option>
-          </select>
+          <label for="inputAdrres2">Estado</label>
+          <input type="text" formControlName="estado" class="form-control" placeholder="estado">
         </div>
       </div>
     </div>
@@ -83,7 +75,7 @@
         <input type="text" formControlName="campo" class="form-control" id="inputZip">
       </div>
     </div>
-    <button type="submit" class="btn">Enviar formulário</button>
+    <button type="submit" class="btn" [disabled]="!profileForm.valid">Enviar formulário</button>
   </form>
 </div>
 <app-footer></app-footer>
