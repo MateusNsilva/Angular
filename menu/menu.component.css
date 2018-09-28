@@ -1,0 +1,10 @@
+#page {
+  background-color:#212529;
+}
+#page a{color: white}
+.container #cards{
+  border: none;
+}
+#botaoMenu{
+  color: white;
+}

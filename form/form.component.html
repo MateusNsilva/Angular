@@ -1,0 +1,89 @@
+<app-menu></app-menu>
+<div class="container">
+  <form [formGroup]="profileForm" (ngSubmit)="sendEmail($event)">
+    <div class="row">
+      <div class="col-4">
+        <div class="form-group ">
+          <label for="inputEmail4">Nome do beneficiário</label>
+          <input type="email" formControlName="beneficiario" class="form-control" placeholder="Nome">
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="inputPassword4">Email</label>
+          <input type="password" formControlName="email" class="form-control" placeholder="Email">
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="inputPassword4">Telefone</label>
+          <input type="password" formControlName="telefone" class="form-control" placeholder="Telefone">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="inputAddress">Cep</label>
+          <input type="text" formControlName="cep" class="form-control" placeholder="Cep">
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="inputAddress">Endereço</label>
+          <input type="text" formControlName="endereco" class="form-control" placeholder="Enderreço">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <div class="form-group">
+          <label for="inputAddress2">Numero</label>
+          <input type="text" formControlName="numero" class="form-control" placeholder="numero">
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="inputAddress2">Complemento</label>
+          <input type="text" formControlName="complemento" class="form-control" placeholder="complemento">
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="inputAddress2">Bairro</label>
+          <input type="text" formControlName="bairro" class="form-control" placeholder="bairro">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="inputAddres2">Selecione sua cidade</label>
+          <select formControlName="cidade" class="form-control" placeholder="Selecione sua cidade">
+            <option>São Paulo</option>
+            <option>Pernambuco</option>
+            <option>Bahia</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="inputAddres2">Selecione seu estado</label>
+          <select formControlName="estado" class="form-control">
+            <option>São Paulo</option>
+            <option>Recife</option>
+            <option>Salvador</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-12">
+        <label for="inputZip">Campo de mensagem</label>
+        <input type="text" formControlName="campo" class="form-control" id="inputZip">
+      </div>
+    </div>
+    <button type="submit" class="btn">Enviar formulário</button>
+  </form>
+</div>
+<app-footer></app-footer>
